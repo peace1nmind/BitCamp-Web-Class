@@ -2,14 +2,11 @@ package jw04;
 // W D 
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
-
-import jw.common.pool.OracleConnectionPool;
 
 public class UserDataSourceDao {
 
