@@ -224,7 +224,96 @@
 		<url-pattern>/LoginBeanPool</url-pattern>
 	</servlet-mapping>
 	
+	
+	<!-- d240816_Fri Start -->
+	
+		<!-- LoginBeanDataSource -->
+		<servlet>
+			<servlet-name>LoginBeanDataSource</servlet-name>
+			<servlet-class>jw04.LoginBeanDataSource</servlet-class>
+		</servlet>
+	
+		<servlet-mapping>
+			<servlet-name>LoginBeanDataSource</servlet-name>
+			<url-pattern>/LoginBeanDataSource</url-pattern>
+		</servlet-mapping>
+		
+		<!-- CookieWriterToClient -->
+		<servlet>
+			<servlet-name>CookieWriterToClient</servlet-name>
+			<servlet-class>jw05.CookieWriterToClient</servlet-class>
+		</servlet>
+	
+		<servlet-mapping>
+			<servlet-name>CookieWriterToClient</servlet-name>
+			<url-pattern>/CookieWriterToClient</url-pattern>
+		</servlet-mapping>
+		
+		<!-- CookieReaderToServer -->
+		<servlet>
+			<servlet-name>CookieReaderToServer</servlet-name>
+			<servlet-class>jw05.CookieReaderToServer</servlet-class>
+		</servlet>
+	
+		<servlet-mapping>
+			<servlet-name>CookieReaderToServer</servlet-name>
+			<url-pattern>/CookieReaderToServer</url-pattern>
+		</servlet-mapping>
+		
+		<!-- SessionUseCookieOne -->
+		<servlet>
+			<servlet-name>SessionUseCookieOne</servlet-name>
+			<servlet-class>jw05.SessionUseCookieOne</servlet-class>
+		</servlet>
+	
+		<servlet-mapping>
+			<servlet-name>SessionUseCookieOne</servlet-name>
+			<url-pattern>/SessionUseCookieOne</url-pattern>
+		</servlet-mapping>
+		
+		<!-- SessionUseCookieTwo -->
+		<servlet>
+			<servlet-name>SessionUseCookieTwo</servlet-name>
+			<servlet-class>jw05.SessionUseCookieTwo</servlet-class>
+		</servlet>
+	
+		<servlet-mapping>
+			<servlet-name>SessionUseCookieTwo</servlet-name>
+			<url-pattern>/SessionUseCookieTwo</url-pattern>
+		</servlet-mapping>
+		
+		<!-- SessionInvalidate -->
+		<servlet>
+			<servlet-name>SessionInvalidate</servlet-name>
+			<servlet-class>jw05.SessionInvalidate</servlet-class>
+		</servlet>
+	
+		<servlet-mapping>
+			<servlet-name>SessionInvalidate</servlet-name>
+			<url-pattern>/SessionInvalidate</url-pattern>
+		</servlet-mapping>
+		
+		<!-- LoginBeanDataSourceSession -->
+		<servlet>
+			<servlet-name>LoginBeanDataSourceSession</servlet-name>
+			<servlet-class>jw05.LoginBeanDataSourceSession</servlet-class>
+		</servlet>
+	
+		<servlet-mapping>
+			<servlet-name>LoginBeanDataSourceSession</servlet-name>
+			<url-pattern>/LoginBeanDataSourceSession</url-pattern>
+		</servlet-mapping>
+		
+		
+	<!-- d240816_Fri End -->
 
-	<!-- http://127.0.0.1:8080/edu/FirstServlet -->
-
+	
+	<!-- DataSource -->
+	<resource-ref>
+		<res-ref-name>jdbc/ora</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	
+	
 </web-app>

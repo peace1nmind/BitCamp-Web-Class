@@ -1,16 +1,18 @@
 <html>
-<head></head>
-<body>
+<head>
+	<title>LoginBeanDataSource.html</title>
+</head>
+<body onload="documnet.loginBeanDataSource.id.focus()">
 
 	<center><h2>LoginBeanDataSource Test </h2></center>
 
-	<form method='post' action='../LoginBeanDataSource'>
+	<form method='post' action='../LoginBeanDataSource' name="loginBeanDataSource">
 	
 		Id &nbsp;&nbsp;&nbsp;<input type='text' name='id'><br/>
 		pwd <input type='text' name='pwd'><br/><p/>
 
 		<input type='submit' value='로그인' />
-		<input type='reset' value='취소' />
+		<input type='reset' value='취소' onclick="documnet.loginBeanDataSource.id.focus()"/>
 
 	</form>
 
