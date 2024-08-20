@@ -49,7 +49,7 @@ public abstract class AbstractDao {
 		System.out.println("\npackage jw.common.dao.AbstractDao");
 		System.out.println("new AbstractDao().close(con, pstmt) 실행\n");
 		
-		if (pstmt == null) {
+		if (pstmt != null) {
 			try {
 				System.out.println("pstmt.close()");
 				pstmt.close();
@@ -61,7 +61,7 @@ public abstract class AbstractDao {
 			}
 		}// pstmt close()
 		
-		if (con == null) {
+		if (con != null) {
 			try {
 				System.out.println("con.close()");
 				con.close();
@@ -83,7 +83,7 @@ public abstract class AbstractDao {
 		System.out.println("\npackage jw.common.dao.AbstractDao");
 		System.out.println("new AbstractDao().close(con, pstmt, rs) 실행\n");
 		
-		if (rs == null) {
+		if (rs != null) {
 			try {
 				System.out.println("rs.close()");
 				rs.close();
@@ -100,5 +100,38 @@ public abstract class AbstractDao {
 		System.out.println("\nnew AbstractDao().close(con, pstmt, rs) 종료\n");
 		
 	}// close(con, pstmt, rs) end
+	
+	
+public void close(PreparedStatement pstmt, ResultSet rs) {
+		
+		System.out.println("\npackage jw.common.dao.AbstractDao");
+		System.out.println("new AbstractDao().close(con, pstmt, rs) 실행\n");
+		
+		if (rs != null) {
+			try {
+				System.out.println("rs.close()");
+				rs.close();
+				System.out.println("rs closed");
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+				
+			}
+		}// rs close()
+		
+		if (pstmt != null) {
+			
+			try {
+				System.out.println("pstmt.close()");
+				pstmt.close();
+				System.out.println("rs closed");
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+				
+			}	
+		}// pstmt close()
+		
+	}// close(pstmt, rs) end
 
 }// class end

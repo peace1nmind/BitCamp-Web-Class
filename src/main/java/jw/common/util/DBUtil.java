@@ -59,7 +59,7 @@ public class DBUtil {
 			InitialContext ic = new InitialContext();
 			
 			System.out.println("Get DataSource");
-			DataSource ds = (DataSource) ic.lookup("jdbc:comp/env/jdbc/ora");
+			DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/ora");
 			
 			System.out.println("DataSource.getConnection()");
 			con = ds.getConnection();
