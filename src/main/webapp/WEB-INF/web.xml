@@ -375,6 +375,7 @@
 		<location>/jw05/405ErrorDisplay.html</location>
 	</error-page>
 	
+	<!-- 
 	<error-page>
 		<exception-type>java.lang.NullPointerException</exception-type>
 		<location>/NullErrorDisplay</location>
@@ -384,7 +385,7 @@
 		<exception-type>java.lang.Exception</exception-type>
 		<location>/NullErrorDisplay</location>
 	</error-page>
-	
+	-->
 	
 	
 </web-app>
