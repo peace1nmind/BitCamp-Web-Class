@@ -42,7 +42,7 @@ public class UserDataSourceDao {
 			System.out.println("ExecuteQeury()\n");
 			
 			if (rs.next()) {
-				System.out.println("UserDataSourceDao 에서 확인 한 id, pwd = "+userVO.getId()+" : "+userVO.getPwd());
+				System.out.println("UserDao 에서 확인 한 id, pwd = "+userVO.getId()+" : "+userVO.getPwd());
 				System.out.println();
 				
 				userVO.setActive(true);
