@@ -21,7 +21,7 @@
 		<%
 			request.setCharacterEncoding("euc_kr");
 			
-			String id = request.getParameter("id");
+			String id = request.getParameter("id").trim();
 			String pwd = request.getParameter("pwd");
 			
 			//HttpSession session = request.getSession(true);
@@ -45,10 +45,13 @@
 		<%	} %>
 			
 		<br><br>
-		<input type='button' value='Home' onclick="window.location.href='../'" style='height: 30px'>
-		&nbsp;&nbsp;&nbsp;
-		<input type='button' value='뒤로' 
-			onclick="window.location.href='login.html'" style='height: 30px'>
 		
+		<input type='button' value='Home' onclick="window.location.href='../'" style='height: 30px'>
+		<input type='button' value='뒤로' onclick="window.location.href='login.html'" style='height: 30px'>
+		&nbsp;&nbsp;&nbsp;
+		<%	if (userVO.isActive()) { %>
+			<input type='button' value='Logout' onclick="window.location.href='../jw08/logout.jsp'" style='height: 30px'>
+			<input type='button' value='전체 회원보기' onclick="window.location.href='../jw08/listUser.jsp'" style='height: 30px'>
+		<%	} %>
 	</body>
 </html>

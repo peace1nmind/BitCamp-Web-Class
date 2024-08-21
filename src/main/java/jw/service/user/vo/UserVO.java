@@ -7,6 +7,7 @@ public class UserVO {
 	private String id;
 	private String pwd;
 	private boolean active;
+	private int no;
 
 	
 	// Constructor
@@ -19,11 +20,18 @@ public class UserVO {
 		this.pwd = pwd;
 	}
 
+	public UserVO(int no, String id, String pwd) {
+		super();
+		this.id = id;
+		this.pwd = pwd;
+		this.no = no;
+	}
+	
 
 	// Method
 	@Override
 	public String toString() {
-		return String.format("UserVO [id=%s, pwd=%s, active=%b]", id, pwd, active);
+		return String.format("UserVO [id= %s, pwd= %s, active= %b, no= %d]", id, pwd, active, no);
 	}
 	
 	
@@ -51,7 +59,14 @@ public class UserVO {
 	public void setActive(boolean active) {
 		this.active = active;
 	}
-	
+
+	public int getNo() {
+		return no;
+	}
+
+	public void setNo(int no) {
+		this.no = no;
+	}
 
 }
 // class end
