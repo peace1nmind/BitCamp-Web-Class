@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans 	xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans.xsd">												 
+	
+	<!-- 다중 xml 설정 import로 처리 가능 
+		<import resource="dicemultiplayerservice01.xml:/>
+		<import resource="userservice03.xml"/>
+	-->
+	
+	<!-- depends-on 된 애들 먼저 실행, sigleton은 default (한개의 Bean만 제공) -->
+	<bean id="lifeCycle01" class="spring.service.lifecycle.LifeCycle01"
+			init-method="init"
+			destroy-method="destory"
+			depends-on="lifeCycle02,lifeCycle03"
+			scope="singleton"/>
+	
+	<bean id="lifeCycle02" class="spring.service.lifecycle.LifeCycle01"/>
+	
+	<bean id="lifeCycle03" class="spring.service.lifecycle.LifeCycle01"/>
+	
+	<bean id="lifeCycle04" class="spring.service.lifecycle.LifeCycle01"
+			scope="prototype"/>
+	
+</beans>
